@@ -1,0 +1,404 @@
+@font-face {
+font-family: "Angeline Vintage";
+src: url("fonts/Angeline-Vintage.ttf");
+src: url("fonts/Angeline-Vintage.otf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.illustration {
+  height: 100%;
+  height: 100vh;
+  width: calc(100% - 250px);
+  width: calc(100vw - 250px);
+  position: relative;
+  overflow: hidden;
+  margin-left: 250px;
+}
+
+.illustration svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.alien-table {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-animation: tableRotate 12s linear infinite;
+          animation: tableRotate 12s linear infinite;
+}
+
+.cartoon-table {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  -webkit-animation: tableRotate 10s linear infinite;
+          animation: tableRotate 10s linear infinite;
+  animation-direction: reverse;
+}
+
+.people-table {
+  -webkit-transform: translate(5px, 5px);
+          transform: translate(5px, 5px);
+  -webkit-animation: tableRotate 8s linear infinite;
+          animation: tableRotate 8s linear infinite;
+}
+
+.background-image{
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+.background-repeater{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: url(../images/background-repeat.png) 0% 0% repeat-x;
+  background-size: auto 100%;
+}
+
+@-webkit-keyframes tableRotate {
+  from {
+    -webkit-transform: rotate(0deg) translateX(5px) rotate(0deg);
+            transform: rotate(0deg) translateX(5px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateX(5px) rotate(-360deg);
+            transform: rotate(360deg) translateX(5px) rotate(-360deg);
+  }
+}
+
+@keyframes tableRotate {
+  from {
+    -webkit-transform: rotate(0deg) translateX(5px) rotate(0deg);
+            transform: rotate(0deg) translateX(5px) rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg) translateX(5px) rotate(-360deg);
+            transform: rotate(360deg) translateX(5px) rotate(-360deg);
+  }
+}
+
+#holiday_game_plane {
+  position: absolute;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-animation: flyInRight 20s linear infinite;
+          animation: flyInRight 20s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#find_the_food_plane {
+  position: absolute;
+  -webkit-transform: translateX(100%, 30px);
+          transform: translateX(100%, 30px);
+  -webkit-animation: flyInLeft 20s linear infinite;
+          animation: flyInLeft 20s linear infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes flyInLeft {
+  0% {
+    -webkit-transform: translate(200vw, 30px);
+            transform: translate(200vw, 30px);
+  }
+
+  100% {
+    -webkit-transform: translate(-200vw, 30px);
+            transform: translate(-200vw, 30px);
+  }
+}
+
+@keyframes flyInLeft {
+  0% {
+    -webkit-transform: translate(200vw, 30px);
+            transform: translate(200vw, 30px);
+  }
+
+  100% {
+    -webkit-transform: translate(-200vw, 30px);
+            transform: translate(-200vw, 30px);
+  }
+}
+
+@-webkit-keyframes flyInRight {
+  0% {
+    -webkit-transform: translateX(-200vw);
+            transform: translateX(-200vw);
+  }
+
+  100% {
+    -webkit-transform: translateX(200vw);
+            transform: translateX(200vw);
+  }
+}
+
+@keyframes flyInRight {
+  0% {
+    -webkit-transform: translateX(-200vw);
+            transform: translateX(-200vw);
+  }
+
+  100% {
+    -webkit-transform: translateX(200vw);
+            transform: translateX(200vw);
+  }
+}
+
+.find-stuff-bar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #FFF9BF;
+  overflow-y: auto;
+}
+
+.find-stuff-bar .stuff-holder{
+  text-align: center;
+  margin: 0 auto;
+  padding-top:20px;
+}
+
+.find-stuff-bar .stuff-holder img{
+  position:relative;
+  top:-5px;
+}
+
+.find-stuff-bar .stuff{
+  height: 110px;
+  width: 100px;
+  display:inline-block;
+  position:relative;
+}
+
+.find-stuff-bar .stuff .stuff-name{
+  text-align:center;
+  width: 100%;
+}
+
+.yellow-top{
+  position: fixed;
+  top: 0;
+  color: #ffffff;
+  width:100%;
+  height: 40px;
+  background-color: #433069;
+  text-align:center;
+}
+
+.logo-time-holder{
+  margin:0 auto;
+  max-width: 300px;
+  padding-left: 270px;
+}
+
+.backe-logo{
+  float:left;
+}
+
+.timer{
+  float:right;
+  margin-top:10px;
+}
+
+.backe-logo img{
+  width: 165px;
+  height: 22px;
+  margin-top: 8px;
+}
+
+.yellow-right{
+  position: fixed;
+  right: 0;
+  top:0;
+  width: 10px;
+  height:100%;
+  background-color: #433069;
+}
+.yellow-bottom{
+  position: fixed;
+  bottom: 0;
+  height: 10px;
+  width:100%;
+  background-color: #433069;
+}
+
+.mobile-warning{
+  display: none;
+  position: fixed;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(43, 43, 43, 0.94);
+}
+
+.warning-padding{
+  margin: 0 auto;
+  top: 10%;
+  width: 100%;
+  position: fixed;
+}
+
+.warning-text{
+  min-width: 300px;
+  max-width: 80vw;
+  color: #ffffff;
+  background: url(../images/background-start.png) 0% 0% repeat-x;
+  background-size: cover;
+  margin: 0 auto;
+  font-size: 2em;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #ffffff;
+}
+
+.start-overlay-wrapper,
+.end-overlay-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(43, 43, 43, 0.94);
+}
+
+.end-overlay-wrapper{
+  display: none;
+}
+
+.start-overlay-padding,
+.end-overlay-padding{
+  margin: 0 auto;
+  top: 10%;
+  width: 100%;
+  position: fixed;
+}
+
+.start-overlay,
+.end-overlay{
+  min-width: 300px;
+  width: 80vw;
+  max-width: 1150px;
+  background: url(../images/background-start.png) 0% 0% repeat-x;
+  background-size:cover;
+  margin: 0 auto;
+  font-size: 2em;
+  border-radius: 10px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.end-time{
+  font-size: .9em;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.start-title{
+  font-size: .9em;
+}
+
+.start-sub-title{
+  font-family: 'Angeline Vintage', Arial, sans-serif;
+  font-weight:normal;
+  font-style:normal;
+  font-size: 2em;
+  line-height: 95px;
+}
+
+.how-to-play-wrapper{
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top:25px;
+}
+
+.how-to-play{
+  color: #c1aede;
+  text-align: left;
+  font-size: .7em;
+  font-weight: bold;
+}
+
+.how-to-play ul{
+  margin-top: 10px;
+}
+
+.how-to-play ul li{
+  color: #ffffff;
+  font-size: .9em;
+  margin-bottom: 5px;
+  font-weight: normal;
+}
+
+.start-sub-title .title{
+  position: relative;
+  top:-20px;
+}
+
+.start-intro{
+    font-size: .7em;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align:left;
+}
+
+.play-game{
+  background-color: #fefdff;
+  color: #634588;
+  font-size: .6em;
+  padding: 8px 14px 6px;
+  border: 3px solid #dcd9e0;
+  border-radius: 10px;
+  margin: 10px 20px;
+  cursor: pointer;
+  max-width:200px;
+  text-align:center;
+  margin:0 auto;
+}
+
+.play-game:hover{
+  background-color: #634588;
+  color: #fefdff;
+}
+.holiday-cook-book{
+  font-size: .6em;
+  margin-top:20px;
+}
+.download-cook-book a{
+  color: #c1aede;
+  text-decoration: underline;
+}
+
+.img-pdf{
+  position: relative;
+}
+.img-pdf img{
+  position: absolute;
+  top: -10px;
+  left: 15px;
+}
+
+@media screen and (max-width:800px){
+  .mobile-warning{
+    display: block;
+  }
+}
